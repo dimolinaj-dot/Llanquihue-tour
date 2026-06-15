@@ -1,0 +1,6 @@
+Ruta del Vino;Llanquihue;85000;gastronomico
+Navegacion Lago Todos los Santos;Puerto Varas;120000;lacustre
+Museo Pablo Fierro;Llanquihue;30000;cultural
+Termas de Puyehue;Puyehue;95000;relax
+Isla Huar;Calbuco;45000;cultural
+Ruta Salmon;Frutillar;110000;gastronomico
