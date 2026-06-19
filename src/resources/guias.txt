@@ -1,0 +1,4 @@
+12345678-9;María;González;912345678;maria.gonzalez@email.com;Gastronomía;5
+98765432-1;Pedro;Ramírez;987654321;pedro.ramirez@email.com;Cultural;8
+11223344-5;Ana;López;934567890;ana.lopez@email.com;Lacustre;3
+99887766-5;Carlos;Mendoza;956789012;carlos.mendoza@email.com;Gastronomía;6

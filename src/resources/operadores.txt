@@ -1,0 +1,3 @@
+66778899-0;Jorge;Molina;978901234;jorge.molina@email.com;Tour Gastronómico;Llanquihue
+77889900-1;Claudia;Reyes;989012345;claudia.reyes@email.com;Paseo Lacustre;Puerto Varas
+88990011-2;Patricio;Valenzuela;990123456;patricio.valenzuela@email.com;Tour Cultural;Frutillar

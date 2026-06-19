@@ -1,0 +1,4 @@
+22334455-6;Carlos;Pérez;923456789;carlos.perez@email.com;Transporte;Av. Costanera 123
+33445566-7;Luisa;Martínez;945678901;luisa.martinez@email.com;Alimentos;Calle Gastronomía 456
+44556677-8;Roberto;Soto;956789012;roberto.soto@email.com;Hospedaje;Ruta 5 Sur km 50
+55667788-9;Elena;Fernández;967890123;elena.fernandez@email.com;Transporte;Av. Puerto Varas 789
