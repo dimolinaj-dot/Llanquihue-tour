@@ -1,6 +1,7 @@
 package ui;
 
 import data.GestorDatos;
+import data.GestorServicios;
 import model.*;
 import service.LlanquihueService;
 import java.util.List;
@@ -68,18 +69,19 @@ public class Main {
     // ============================================
     private static void mostrarMenu() {
         System.out.println("===== MENÚ PRINCIPAL =====");
-        System.out.println("1. Mostrar todos los datos");
-        System.out.println("2. Buscar tours por precio mínimo");
-        System.out.println("3. Buscar tours por tipo");
-        System.out.println("4. Buscar guías por especialidad");
-        System.out.println("5. Buscar guías por años de experiencia");
-        System.out.println("6. Buscar proveedores por rubro");
-        System.out.println("7. Buscar operadores por zona de trabajo");
-        System.out.println("8. Mostrar todos los tours");
-        System.out.println("9. Mostrar todos los guías");
+        System.out.println("1.  Mostrar todos los datos");
+        System.out.println("2.  Buscar tours por precio mínimo");
+        System.out.println("3.  Buscar tours por tipo");
+        System.out.println("4.  Buscar guías por especialidad");
+        System.out.println("5.  Buscar guías por años de experiencia");
+        System.out.println("6.  Buscar proveedores por rubro");
+        System.out.println("7.  Buscar operadores por zona de trabajo");
+        System.out.println("8.  Mostrar todos los tours");
+        System.out.println("9.  Mostrar todos los guías");
         System.out.println("10. Mostrar todos los proveedores");
         System.out.println("11. Mostrar todos los operadores");
-        System.out.println("0. Salir");
+        System.out.println("12. Mostrar servicios turísticos (Semana 6)");
+        System.out.println("0.  Salir");
         System.out.print("Seleccione una opción: ");
     }
 
@@ -128,6 +130,9 @@ public class Main {
                 break;
             case 11:
                 mostrarOperadores();
+                break;
+            case 12:
+                mostrarServiciosTuristicos();
                 break;
             case 0:
                 System.out.println("Saliendo...");
@@ -284,5 +289,14 @@ public class Main {
                 System.out.println(o);
             }
         }
+    }
+
+    // ============================================
+    // MÉTODO PARA MOSTRAR SERVICIOS TURÍSTICOS (Semana 6)
+    // ============================================
+    private static void mostrarServiciosTuristicos() {
+        System.out.println("\n=== SERVICIOS TURÍSTICOS ===");
+        List<ServicioTuristico> servicios = GestorServicios.crearServiciosDePrueba();
+        GestorServicios.mostrarServicios(servicios);
     }
 }

@@ -55,5 +55,26 @@ resources/
 - `proveedores.txt`: `rut;nombre;apellido;telefono;email;rubro;direccion`
 - `operadores.txt`: `rut;nombre;apellido;telefono;email;tipoOperacion;zonaTrabajo`
 
+## Semana 6 - Jerarquía de clases con herencia
+
+### Objetivo
+Implementar una jerarquía de clases para representar diferentes tipos de servicios turísticos.
+
+### Clases creadas
+| Clase | Tipo | Atributos |
+|-------|------|-----------|
+| `ServicioTuristico` | Superclase | `nombre`, `duracionHoras` |
+| `RutaGastronomica` | Subclase | + `numeroDeParadas` |
+| `PaseoLacustre` | Subclase | + `tipoEmbarcacion` |
+| `ExcursionCultural` | Subclase | + `lugarHistorico` |
+
+### Nueva funcionalidad
+- Opción 12 en el menú: "Mostrar servicios turísticos"
+- Crea instancias de prueba de cada subclase y las muestra por consola
+
+### Cómo probar
+1. Ejecutar `ui.Main`
+2. Seleccionar opción 12
+3. Ver los 6 servicios turísticos creados con sus atributos específicos
 ## Autor
 [Diego Molina] - Duoc UC - Desarrollo Orientado a Objetos I - Semana 5
