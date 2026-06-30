@@ -1,15 +1,15 @@
 package model;
 
 public class PaseoLacustre extends ServicioTuristico {
-    // Atributo específico de paseos lacustres
+    // Atributo específico
     private String tipoEmbarcacion;
 
     // Constructor vacío
     public PaseoLacustre() {}
 
-    // Constructor con parámetros (usando super para heredar)
+    // Constructor con parámetros
     public PaseoLacustre(String nombre, int duracionHoras, String tipoEmbarcacion) {
-        super(nombre, duracionHoras);  // Llama al constructor de ServicioTuristico
+        super(nombre, duracionHoras);
         this.tipoEmbarcacion = tipoEmbarcacion;
     }
 
@@ -22,7 +22,19 @@ public class PaseoLacustre extends ServicioTuristico {
         this.tipoEmbarcacion = tipoEmbarcacion;
     }
 
-    // Sobrescribir toString para mostrar información completa
+    /**
+     * SOBRESCRITURA del método mostrarInformacion()
+     * Esta versión es específica para PaseoLacustre
+     */
+    @Override
+    public void mostrarInformacion() {
+        System.out.println("=== PASEO LACUSTRE ===");
+        System.out.println("⛵ Nombre: " + getNombre());
+        System.out.println("⏱️ Duración: " + getDuracionHoras() + " horas");
+        System.out.println("🚤 Tipo de embarcación: " + tipoEmbarcacion);
+        System.out.println("¡Disfruta de las aguas del sur de Chile!");
+    }
+
     @Override
     public String toString() {
         return "PaseoLacustre{" +

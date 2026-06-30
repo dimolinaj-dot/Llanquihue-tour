@@ -1,15 +1,15 @@
 package model;
 
 public class RutaGastronomica extends ServicioTuristico {
-    // Atributo específico de rutas gastronómicas
+    // Atributo específico
     private int numeroDeParadas;
 
     // Constructor vacío
     public RutaGastronomica() {}
 
-    // Constructor con parámetros (usando super para heredar)
+    // Constructor con parámetros
     public RutaGastronomica(String nombre, int duracionHoras, int numeroDeParadas) {
-        super(nombre, duracionHoras);  // Llama al constructor de ServicioTuristico
+        super(nombre, duracionHoras);
         this.numeroDeParadas = numeroDeParadas;
     }
 
@@ -22,7 +22,19 @@ public class RutaGastronomica extends ServicioTuristico {
         this.numeroDeParadas = numeroDeParadas;
     }
 
-    // Sobrescribir toString para mostrar información completa
+    /**
+     * SOBRESCRITURA del método mostrarInformacion()
+     * Esta versión es específica para RutaGastronomica
+     */
+    @Override
+    public void mostrarInformacion() {
+        System.out.println("=== RUTA GASTRONÓMICA ===");
+        System.out.println("🍷 Nombre: " + getNombre());
+        System.out.println("⏱️ Duración: " + getDuracionHoras() + " horas");
+        System.out.println("🍽️ Número de paradas: " + numeroDeParadas);
+        System.out.println("¡Disfruta de los mejores sabores de la región!");
+    }
+
     @Override
     public String toString() {
         return "RutaGastronomica{" +

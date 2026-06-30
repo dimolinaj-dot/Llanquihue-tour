@@ -1,7 +1,7 @@
 package model;
 
 public class ServicioTuristico {
-    // Atributos comunes a todos los servicios
+    // Atributos comunes
     private String nombre;
     private int duracionHoras;
 
@@ -31,7 +31,15 @@ public class ServicioTuristico {
         this.duracionHoras = duracionHoras;
     }
 
-    // Método toString (será sobrescrito por las subclases)
+    /**
+     * Método que muestra la información del servicio.
+     * SERÁ SOBRESCRITO por las subclases.
+     */
+    public void mostrarInformacion() {
+        System.out.println("Servicio Turístico: " + nombre);
+        System.out.println("Duración: " + duracionHoras + " horas");
+    }
+
     @Override
     public String toString() {
         return "ServicioTuristico{" +

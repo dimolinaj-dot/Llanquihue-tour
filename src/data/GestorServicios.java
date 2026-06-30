@@ -7,17 +7,18 @@ import java.util.List;
 public class GestorServicios {
 
     /**
-     * Método que crea instancias de prueba de cada subclase
-     * @return Lista con todos los servicios creados
+     * MÉTODO 1: Crear una colección polimórfica
+     * Crea 6 servicios mezclando los 3 tipos
      */
     public static List<ServicioTuristico> crearServiciosDePrueba() {
+        // Crear una lista que puede contener CUALQUIER subtipo de ServicioTuristico
         List<ServicioTuristico> servicios = new ArrayList<>();
 
-        // Crear 2 Rutas Gastronómicas
+        // ===== AGREGAR RUTAS GASTRONÓMICAS =====
         servicios.add(new RutaGastronomica(
-                "Ruta del Vino y Cerveza Artesanal",
-                6,
-                5
+                "Ruta del Vino y Cerveza Artesanal",  // nombre
+                6,                                     // duracionHoras
+                5                                      // numeroDeParadas
         ));
 
         servicios.add(new RutaGastronomica(
@@ -26,7 +27,7 @@ public class GestorServicios {
                 3
         ));
 
-        // Crear 2 Paseos Lacustres
+        // ===== AGREGAR PASEOS LACUSTRES =====
         servicios.add(new PaseoLacustre(
                 "Navegación Lago Todos los Santos",
                 3,
@@ -39,7 +40,7 @@ public class GestorServicios {
                 "Lancha"
         ));
 
-        // Crear 2 Excursiones Culturales
+        // ===== AGREGAR EXCURSIONES CULTURALES =====
         servicios.add(new ExcursionCultural(
                 "Museo Pablo Fierro y Frutillar",
                 4,
@@ -57,8 +58,8 @@ public class GestorServicios {
     }
 
     /**
-     * Método que muestra todos los servicios por consola
-     * @param servicios Lista de servicios a mostrar
+     * MÉTODO 2: Mostrar servicios USANDO POLIMORFISMO
+     * Recorre la lista y llama al método sobrescrito de cada objeto
      */
     public static void mostrarServicios(List<ServicioTuristico> servicios) {
         if (servicios == null || servicios.isEmpty()) {
@@ -66,10 +67,36 @@ public class GestorServicios {
             return;
         }
 
-        System.out.println("\n===== LISTA DE SERVICIOS TURÍSTICOS =====");
+        System.out.println("\n" + "=".repeat(50));
+        System.out.println("   LISTA DE SERVICIOS TURÍSTICOS");
+        System.out.println("   (Demostración de POLIMORFISMO)");
+        System.out.println("=".repeat(50) + "\n");
+
+        // RECORRIDO POLIMÓRFICO
+        // Aunque la variable 's' es de tipo ServicioTuristico,
+        // Java ejecuta el método de la clase REAL del objeto
         for (ServicioTuristico s : servicios) {
-            System.out.println(s);  // Llama automáticamente al toString() de cada subclase
+            s.mostrarInformacion();  // ← POLIMORFISMO EN ACCIÓN
+            System.out.println("-".repeat(40));
         }
-        System.out.println("=========================================\n");
+
+        System.out.println("Total de servicios: " + servicios.size());
+        System.out.println("=".repeat(50) + "\n");
+    }
+
+    /**
+     * MÉTODO 3: Mostrar servicios usando toString (para comparar)
+     * Este método NO usa polimorfismo, solo muestra el toString()
+     */
+    public static void mostrarServiciosConToString(List<ServicioTuristico> servicios) {
+        if (servicios == null || servicios.isEmpty()) {
+            System.out.println("No hay servicios para mostrar.");
+            return;
+        }
+
+        System.out.println("\n===== SERVICIOS (usando toString) =====");
+        for (ServicioTuristico s : servicios) {
+            System.out.println(s);
+        }
     }
 }

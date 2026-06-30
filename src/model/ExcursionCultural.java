@@ -1,15 +1,15 @@
 package model;
 
 public class ExcursionCultural extends ServicioTuristico {
-    // Atributo específico de excursiones culturales
+    // Atributo específico
     private String lugarHistorico;
 
     // Constructor vacío
     public ExcursionCultural() {}
 
-    // Constructor con parámetros (usando super para heredar)
+    // Constructor con parámetros
     public ExcursionCultural(String nombre, int duracionHoras, String lugarHistorico) {
-        super(nombre, duracionHoras);  // Llama al constructor de ServicioTuristico
+        super(nombre, duracionHoras);
         this.lugarHistorico = lugarHistorico;
     }
 
@@ -22,7 +22,19 @@ public class ExcursionCultural extends ServicioTuristico {
         this.lugarHistorico = lugarHistorico;
     }
 
-    // Sobrescribir toString para mostrar información completa
+    /**
+     * SOBRESCRITURA del método mostrarInformacion()
+     * Esta versión es específica para ExcursionCultural
+     */
+    @Override
+    public void mostrarInformacion() {
+        System.out.println("=== EXCURSIÓN CULTURAL ===");
+        System.out.println("🏛️ Nombre: " + getNombre());
+        System.out.println("⏱️ Duración: " + getDuracionHoras() + " horas");
+        System.out.println("📜 Lugar histórico: " + lugarHistorico);
+        System.out.println("¡Sumérgete en la historia y cultura de la zona!");
+    }
+
     @Override
     public String toString() {
         return "ExcursionCultural{" +

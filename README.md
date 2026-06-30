@@ -76,5 +76,34 @@ Implementar una jerarquía de clases para representar diferentes tipos de servic
 1. Ejecutar `ui.Main`
 2. Seleccionar opción 12
 3. Ver los 6 servicios turísticos creados con sus atributos específicos
+
+## Semana 7 - Aplicando polimorfismo y colecciones genéricas
+
+### Objetivo
+Aplicar polimorfismo para recorrer una colección de servicios turísticos y mostrar su información específica usando métodos sobrescritos.
+
+### Clases modificadas
+| Clase | Cambio realizado |
+|-------|------------------|
+| `ServicioTuristico` | Agregado método `mostrarInformacion()` |
+| `RutaGastronomica` | Sobrescrito `mostrarInformacion()` con información de paradas |
+| `PaseoLacustre` | Sobrescrito `mostrarInformacion()` con tipo de embarcación |
+| `ExcursionCultural` | Sobrescrito `mostrarInformacion()` con lugar histórico |
+| `GestorServicios` | Nuevo método `mostrarServicios()` con recorrido polimórfico |
+
+### Funcionamiento del polimorfismo
+- Se crea una lista de tipo `List<ServicioTuristico>`
+- Se almacenan objetos de diferentes subclases (RutaGastronomica, PaseoLacustre, ExcursionCultural)
+- Al recorrer la lista con for-each, se llama a `mostrarInformacion()`
+- Java ejecuta automáticamente la versión sobrescrita según el tipo real de cada objeto
+
+### Nueva funcionalidad
+- Opción **13** en el menú: "Mostrar servicios con polimorfismo"
+- Demostración visual del polimorfismo con íconos y formato diferenciado
+
+### Cómo probar
+1. Ejecutar `ui.Main`
+2. Seleccionar opción **13**
+3. Observar cómo cada servicio muestra su información específica usando polimorfismo
 ## Autor
 [Diego Molina] - Duoc UC - Desarrollo Orientado a Objetos I - Semana 5

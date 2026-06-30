@@ -81,6 +81,7 @@ public class Main {
         System.out.println("10. Mostrar todos los proveedores");
         System.out.println("11. Mostrar todos los operadores");
         System.out.println("12. Mostrar servicios turísticos (Semana 6)");
+        System.out.println("13. Mostrar servicios con polimorfismo (Semana 7)");  // ← NUEVA LÍNEA
         System.out.println("0.  Salir");
         System.out.print("Seleccione una opción: ");
     }
@@ -133,6 +134,9 @@ public class Main {
                 break;
             case 12:
                 mostrarServiciosTuristicos();
+                break;
+            case 13:                                    // ← NUEVO CASO
+                mostrarServiciosConPolimorfismo();
                 break;
             case 0:
                 System.out.println("Saliendo...");
@@ -296,6 +300,15 @@ public class Main {
     // ============================================
     private static void mostrarServiciosTuristicos() {
         System.out.println("\n=== SERVICIOS TURÍSTICOS ===");
+        List<ServicioTuristico> servicios = GestorServicios.crearServiciosDePrueba();
+        GestorServicios.mostrarServiciosConToString(servicios);
+    }
+
+    // ============================================
+    // MÉTODO PARA MOSTRAR SERVICIOS CON POLIMORFISMO (Semana 7)
+    // ============================================
+    private static void mostrarServiciosConPolimorfismo() {
+        System.out.println("\n=== SERVICIOS TURÍSTICOS - DEMOSTRACIÓN DE POLIMORFISMO ===");
         List<ServicioTuristico> servicios = GestorServicios.crearServiciosDePrueba();
         GestorServicios.mostrarServicios(servicios);
     }
