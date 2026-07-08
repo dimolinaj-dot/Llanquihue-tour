@@ -37,4 +37,10 @@ public class Guia extends Persona {
                 ", anosExperiencia=" + anosExperiencia +
                 '}';
     }
+    @Override
+    public void mostrarResumen() {
+        System.out.println("🧑‍🏫 Guía: " + getNombre() + " " + getApellido());
+        System.out.println("   Especialidad: " + getEspecialidad());
+        System.out.println("   Años de experiencia: " + getAnosExperiencia());
+    }
 }

@@ -1,17 +1,14 @@
 package model;
 
-public class Persona {
-    // Atributos privados
+public class Persona implements Registrable {
     private String rut;
     private String nombre;
     private String apellido;
     private String telefono;
     private String email;
 
-    // Constructor vacío
     public Persona() {}
 
-    // Constructor con parámetros
     public Persona(String rut, String nombre, String apellido, String telefono, String email) {
         this.rut = rut;
         this.nombre = nombre;
@@ -20,23 +17,17 @@ public class Persona {
         this.email = email;
     }
 
-    // Getters y Setters
     public String getRut() { return rut; }
     public void setRut(String rut) { this.rut = rut; }
-
     public String getNombre() { return nombre; }
     public void setNombre(String nombre) { this.nombre = nombre; }
-
     public String getApellido() { return apellido; }
     public void setApellido(String apellido) { this.apellido = apellido; }
-
     public String getTelefono() { return telefono; }
     public void setTelefono(String telefono) { this.telefono = telefono; }
-
     public String getEmail() { return email; }
     public void setEmail(String email) { this.email = email; }
 
-    // Método toString
     @Override
     public String toString() {
         return "Persona{" +
@@ -46,5 +37,10 @@ public class Persona {
                 ", telefono='" + telefono + '\'' +
                 ", email='" + email + '\'' +
                 '}';
+    }
+
+    @Override
+    public void mostrarResumen() {
+        System.out.println("👤 Persona: " + nombre + " " + apellido + " (RUT: " + rut + ")");
     }
 }

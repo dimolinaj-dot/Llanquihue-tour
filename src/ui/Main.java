@@ -4,6 +4,8 @@ import data.GestorDatos;
 import data.GestorServicios;
 import model.*;
 import service.LlanquihueService;
+
+import javax.swing.SwingUtilities;  // ← NUEVO IMPORT para la GUI
 import java.util.List;
 import java.util.Scanner;
 
@@ -81,7 +83,8 @@ public class Main {
         System.out.println("10. Mostrar todos los proveedores");
         System.out.println("11. Mostrar todos los operadores");
         System.out.println("12. Mostrar servicios turísticos (Semana 6)");
-        System.out.println("13. Mostrar servicios con polimorfismo (Semana 7)");  // ← NUEVA LÍNEA
+        System.out.println("13. Mostrar servicios con polimorfismo (Semana 7)");
+        System.out.println("14. Abrir Interfaz Gráfica (Semana 8)");  // ← NUEVA LÍNEA
         System.out.println("0.  Salir");
         System.out.print("Seleccione una opción: ");
     }
@@ -135,8 +138,11 @@ public class Main {
             case 12:
                 mostrarServiciosTuristicos();
                 break;
-            case 13:                                    // ← NUEVO CASO
+            case 13:
                 mostrarServiciosConPolimorfismo();
+                break;
+            case 14:                                    // ← NUEVO CASO
+                abrirInterfazGrafica();
                 break;
             case 0:
                 System.out.println("Saliendo...");
@@ -311,5 +317,17 @@ public class Main {
         System.out.println("\n=== SERVICIOS TURÍSTICOS - DEMOSTRACIÓN DE POLIMORFISMO ===");
         List<ServicioTuristico> servicios = GestorServicios.crearServiciosDePrueba();
         GestorServicios.mostrarServicios(servicios);
+    }
+
+    // ============================================
+    // MÉTODO PARA ABRIR LA INTERFAZ GRÁFICA (Semana 8)  ← NUEVO
+    // ============================================
+    private static void abrirInterfazGrafica() {
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new VentanaGUI();  // Abre la ventana gráfica
+            }
+        });
     }
 }
