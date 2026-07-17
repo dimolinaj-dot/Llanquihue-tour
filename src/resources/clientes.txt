@@ -1,0 +1,5 @@
+C001;María;González;912345678;maria@email.com;12.345.678-9;Av. Costanera;123;Llanquihue;Puerto Montt;Los Lagos;Premium;150
+C002;Juan;Pérez;923456789;juan@email.com;98.765.432-1;Calle Lago;45;Puerto Varas;Puerto Varas;Los Lagos;Frecuente;80
+C003;Ana;Martínez;934567890;ana@email.com;11.111.111-1;Av. Los Pioneros;789;Frutillar;Frutillar;Los Lagos;Ocasional;20
+C004;Carlos;López;945678901;carlos@email.com;22.222.222-2;Calle Sur;67;Llanquihue;Puerto Montt;Los Lagos;Premium;200
+C005;Elena;Fernández;956789012;elena@email.com;33.333.333-3;Av. Costanera;890;Puerto Varas;Puerto Varas;Los Lagos;Frecuente;60

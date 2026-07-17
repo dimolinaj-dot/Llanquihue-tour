@@ -1,0 +1,4 @@
+E001;Pedro;Ramírez;987654321;pedro@email.com;44.444.444-4;Av. Central;123;Llanquihue;Puerto Montt;Los Lagos;Guía;550000;15/01/2020
+E002;Luisa;Torres;976543210;luisa@email.com;55.555.555-5;Calle Norte;456;Puerto Varas;Puerto Varas;Los Lagos;Administrador;700000;01/03/2019
+E003;Roberto;Soto;965432109;roberto@email.com;66.666.666-6;Av. Sur;789;Llanquihue;Puerto Montt;Los Lagos;Ventas;480000;01/06/2021
+E004;Patricia;Molina;954321098;patricia@email.com;77.777.777-7;Calle Este;321;Frutillar;Frutillar;Los Lagos;Guía;580000;01/09/2022

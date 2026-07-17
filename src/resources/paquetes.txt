@@ -1,0 +1,5 @@
+PKG001;Tour Gastronómico Lago;5 restaurantes, 2 viñedos con degustación;150000;2
+PKG002;Paseo Lacustre y Cultura;Navegación en Catamarán y visita a museo;120000;1
+PKG003;Aventura y Naturaleza;Trekking, paseo en bote y observación de aves;180000;3
+PKG004;Ruta Patrimonial;Iglesias de Chiloé, museos y gastronomía local;160000;2
+PKG005;Experiencia Premium;Combinación de Gastronomía, Lacustre y Cultural;250000;3

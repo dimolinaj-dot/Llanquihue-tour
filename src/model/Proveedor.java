@@ -1,39 +1,57 @@
 package model;
 
 public class Proveedor extends Persona {
-    // Atributos adicionales
     private String rubro;
-    private String direccion;
 
     // Constructor vacío
     public Proveedor() {}
 
-    // Constructor con parámetros
+    // Constructor sin dirección (7 parámetros)
     public Proveedor(String rut, String nombre, String apellido, String telefono, String email,
-                     String rubro, String direccion) {
+                     String rubro) {
         super(rut, nombre, apellido, telefono, email);
         this.rubro = rubro;
-        this.direccion = direccion;
     }
 
-    // Getters y Setters
+    // Constructor con dirección (8 parámetros)
+    public Proveedor(String rut, String nombre, String apellido, String telefono, String email,
+                     String rubro, Direccion direccion) {
+        super(rut, nombre, apellido, telefono, email, direccion);
+        this.rubro = rubro;
+    }
+
+    // Constructor con objetos RUT y Direccion
+    public Proveedor(String nombre, String apellido, String telefono, String email,
+                     RUT rut, Direccion direccion, String rubro) {
+        super(nombre, apellido, telefono, email, rut, direccion);
+        this.rubro = rubro;
+    }
+
     public String getRubro() { return rubro; }
     public void setRubro(String rubro) { this.rubro = rubro; }
 
-    public String getDireccion() { return direccion; }
-    public void setDireccion(String direccion) { this.direccion = direccion; }
-
-    // Método toString
     @Override
     public String toString() {
         return "Proveedor{" +
-                "rut='" + getRut() + '\'' +
+                "rut='" + getRutString() + '\'' +
                 ", nombre='" + getNombre() + '\'' +
                 ", apellido='" + getApellido() + '\'' +
-                ", telefono='" + getTelefono() + '\'' +
-                ", email='" + getEmail() + '\'' +
                 ", rubro='" + rubro + '\'' +
-                ", direccion='" + direccion + '\'' +
+                ", direccion=" + (getDireccion() != null ? getDireccion().toString() : "null") +
                 '}';
+    }
+
+    @Override
+    public void mostrarResumen() {
+        System.out.println("📦 PROVEEDOR: " + getNombre() + " " + getApellido());
+        System.out.println("   RUT: " + getRutString());
+        System.out.println("   Teléfono: " + getTelefono());
+        System.out.println("   Email: " + getEmail());
+        System.out.println("   Rubro: " + rubro);
+        if (getDireccion() != null) {
+            System.out.println("   Dirección: " + getDireccion().getDireccionCompleta());
+        } else {
+            System.out.println("   Dirección: No registrada");
+        }
     }
 }
